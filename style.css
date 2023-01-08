@@ -1,5 +1,6 @@
 :root {
     --line-height-lg: 1.625;
+    --line-height-sm: 1.9;
     --letter-spacing: 0.1em;
     --font-family: "Roboto", sans-serif;
     --font-size: 16px;
@@ -36,6 +37,25 @@ a {
     margin-inline: auto;
 }
 
+
+.container--sm {
+    width: min(100% - 40px, var(--container-small));
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+
 .header {
     background-color: var(--color-gray-light);
     padding-top: 80px;
@@ -53,7 +73,6 @@ a {
     gap: 42px;
 }
 
-.navbar__item {}
 
 .navbar__link {
     font-style: normal;
@@ -78,7 +97,7 @@ a {
     margin: 0 0 60px;
 }
 
-.content_discription {
+.content_description {
     line-height: 26px;
     color: var(--color-secondary);
     margin-bottom: 65px;
@@ -93,4 +112,86 @@ a {
     min-height: 65px;
     background-color: var(--color-primary);
     color: var(--color-white);
+}
+
+.section {
+    padding-top: 112px;
+    padding-bottom: 100px;
+    background-color: var(--color-white);
+    text-align: center;
+}
+
+.section__title {
+    font-weight: 500;
+    font-size: 32px;
+    line-height: var(--line-height-sm);
+    margin-bottom: 50px;
+}
+
+.section__description {
+    line-height: var(--line-height-lg);
+    color: var(--color-secondary);
+}
+
+.experience {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+.experience-item {
+    display: flex;
+    gap: var(--gap);
+}
+
+.experience_container {
+    display: flex;
+    gap: var(--gap);
+    justify-content: space-between;
+}
+
+.experience-item__numbers {
+    font-weight: 500;
+    font-size: 21px;
+    line-height: var(--line-height-sm);
+}
+
+.experinece-item__title {
+    line-height: var(--line-height-lg);
+}
+
+.experience-item__image {
+    order: -1;
+}
+
+.process__video {
+    width: 100%;
+    height: 600px;
+    border: 0;
+}
+
+.process_container {
+    margin-bottom: 57px;
+}
+
+.footer {
+    background-color: var(--color-primary);
+    padding-top: 50px;
+    padding-bottom: 50px;
+    color: var(--color-white);
+}
+
+
+.footer_name {
+    font-weight: 500;
+    font-size: 21px;
+    line-height: var(--line-height-sm);
+    margin-bottom: 20px;
+}
+
+.footer_copyright {
+    font-weight: 400;
+    font-size: 13px;
+    line-height: var(--line-height-lg);
 }
